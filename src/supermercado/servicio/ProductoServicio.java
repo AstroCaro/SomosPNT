@@ -3,6 +3,8 @@ package supermercado.servicio;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import supermercado.exception.MiException;
 import supermercado.model.ArticuloLimpieza;
 import supermercado.model.Bebida;
 import supermercado.model.Fruta;
@@ -12,27 +14,27 @@ public class ProductoServicio {
 
     public Producto crearBebida(String nombre,
                                 Double precio,
-                                Double volumen) throws Exception {
+                                Double volumen) throws MiException {
         if (nombre.isEmpty() || precio <= 0 || volumen <= 0) {
-            throw new Exception("Bebida inválida");
+            throw new MiException("Bebida inválida");
         }
         return new Bebida(nombre, precio, volumen);
     }
 
     public Producto crearArticuloLimpieza(String nombre,
                                           Double precio,
-                                          Double volumen) throws Exception {
+                                          Double volumen) throws MiException {
         if (nombre.isEmpty() || precio <= 0 || volumen <= 0) {
-            throw new Exception("Artículo de limpieza inválido");
+            throw new MiException("Artículo de limpieza inválido");
         }
         return new ArticuloLimpieza(nombre, precio, volumen);
     }
 
     public Producto crearFruta(String nombre,
                                Double precio,
-                               String unidadDeVenta) throws Exception {
+                               String unidadDeVenta) throws MiException {
         if (nombre.isEmpty() || precio <= 0 || unidadDeVenta.isEmpty()) {
-            throw new Exception("Fruta ingresada inválida");
+            throw new MiException("Fruta ingresada inválida");
         }
         return new Fruta(nombre, precio, unidadDeVenta);
     }
