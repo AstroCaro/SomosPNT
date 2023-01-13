@@ -1,4 +1,4 @@
-#Ejercicio y consideraciones generales de resolución
+# Ejercicio y consideraciones generales de resolución
 
 ## Algunas consideraciones previas
 En la capa de servicio donde se implementa la lógica de negocio, se utilizan algunas validaciones en las operaciones de creación de entidades para restringir el uso de valores en los atributos por fuera del dominio, y por fines prácticos y para mantener la simplicidad del proyecto, no se realizan validaciones en el modelo.
