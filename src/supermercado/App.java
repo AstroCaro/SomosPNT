@@ -1,12 +1,12 @@
 package supermercado;
 
-import supermercado.servicio.SupermercadoServicio;
+import supermercado.servicio.ProductoServicio;
 
 public class App {
 
-    private static final SupermercadoServicio servicio = new SupermercadoServicio();
+    private static final ProductoServicio servicio = new ProductoServicio();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         servicio.imprimirLista();
     }
 }
